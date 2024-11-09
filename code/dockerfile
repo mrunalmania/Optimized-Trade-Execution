@@ -1,0 +1,21 @@
+# Use the official PyTorch image from Docker Hub
+FROM 520713654638.dkr.ecr.us-east-1.amazonaws.com/sagemaker-pytorch:1.0.0-cpu-py3
+
+
+# Set the working directory
+WORKDIR /opt/ml/model
+
+# Copy the inference script and any dependencies into the container
+COPY inference.py .
+COPY requirements.txt .
+COPY model.py .
+
+COPY environment.py .
+
+# Install the required packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+
+RUN chmod +x inference.py
+# Command to run the inference script
+ENTRYPOINT ["python", "inference.py"]

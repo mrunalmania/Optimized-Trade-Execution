@@ -1,0 +1,6 @@
+numpy
+pandas
+torch
+gym
+stable-baselines3
+boto3

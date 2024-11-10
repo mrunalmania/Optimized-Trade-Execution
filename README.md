@@ -79,4 +79,4 @@ The project includes a deployment script using AWS SageMaker and `boto3`. Update
 - Ray RLLib Documentation, Ray (2024).
 
 ## License
-[MIT License](LICENSE)
+[MIT License](https://en.wikipedia.org/wiki/MIT_License)
